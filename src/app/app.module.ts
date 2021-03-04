@@ -10,6 +10,7 @@ import { ContentComponent } from './content/content.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { AlertModule } from 'ngx-bootstrap/alert';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
+import { ProductListItemComponent } from './product-list-item/product-list-item.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ButtonsModule } from 'ngx-bootstrap/buttons';
     FooterComponent,
     SearchComponent,
     ContentComponent,
-    ProductListComponent
+    ProductListComponent,
+    ProductListItemComponent
   ],
   imports: [
     BrowserModule,

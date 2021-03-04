@@ -1,1 +1,6 @@
-<p>footer works!</p>
+<!-- 4. Property anzeigen-->
+<p [class]="redCssStyle" [textContent]="copyright | uppercase"></p>
+<input type="text" name="" value="{{copyright}}" [attr.placeholder]="text" >
+<p [style.color] = "redCssStyle">gdfgdfgdfgdf</p>
+<!-- Übergabe an Child-Komponente -->
+<app-search redCssStyle="red"></app-search>
