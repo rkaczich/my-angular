@@ -1,1 +1,20 @@
+<h1>Data Transformation Types</h1>
+
+<p>{{ 'hallo' | uppercase }}</p>
+<p>{{ 'hallo' | titlecase }}</p>
+<p>{{ 'HALLO' | lowercase }}</p>
+
+<p>Währung: {{ 20.99 | currency: 'EUR' }}</p>
+
+<p>Datum: {{ myDate | date: 'LLLL' }}</p>
+
+// Nutzung der Ländereinstellung
+<p>Prozent: {{ 200 | percent:'2.2':'de' }}</p>
+
+<p>JSON: {{ object | json }}</p>
+
+<p>{{ 'hallo fjsdfhjs dsfsfds' | slice:0:5 }}</p>
+
+<p>.</p>
+<p>.</p>
 <app-product-list [productList]="productList"></app-product-list>

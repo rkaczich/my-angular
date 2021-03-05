@@ -12,6 +12,13 @@ import { AlertModule } from 'ngx-bootstrap/alert';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { ProductListItemComponent } from './product-list-item/product-list-item.component';
 
+// Ländereinstellungen für die Anwendung
+import { LOCALE_ID} from '@angular/core';
+import localeDe from '@angular/common/locales/de';
+import localeDeExtra from '@angular/common/locales/extra/de';
+import { registerLocaleData } from '@angular/common';
+registerLocaleData(localeDe, localeDeExtra);
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +35,10 @@ import { ProductListItemComponent } from './product-list-item/product-list-item.
     AlertModule,
     ButtonsModule
   ],
-  providers: [],
+  providers: [
+    // Bekanntmachung der gewählten Einstellung in der App
+    { provide: LOCALE_ID, useValue: 'de' }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
