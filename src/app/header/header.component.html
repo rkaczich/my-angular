@@ -1,1 +1,8 @@
-<alert type="primary">Bootstrap works</alert>
+<!--<alert type="primary">Bootstrap works</alert>-->
+<div>
+<a routerLink="home">Home</a>&nbsp;
+<a routerLink="pl">Produktliste</a>&nbsp;
+<a routerLink="contact">Kontakt</a>&nbsp;
+<a routerLink="impress">Impressum</a>
+<a [routerLink]="['pl', 42]">Link mit Parameter</a>
+</div>

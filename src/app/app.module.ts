@@ -17,6 +17,9 @@ import { LOCALE_ID} from '@angular/core';
 import localeDe from '@angular/common/locales/de';
 import localeDeExtra from '@angular/common/locales/extra/de';
 import { registerLocaleData } from '@angular/common';
+import { HomeComponent } from './home/home.component';
+import { ImpressComponent } from './impress/impress.component';
+import { ContactComponent } from './contact/contact.component';
 registerLocaleData(localeDe, localeDeExtra);
 
 @NgModule({
@@ -27,7 +30,10 @@ registerLocaleData(localeDe, localeDeExtra);
     SearchComponent,
     ContentComponent,
     ProductListComponent,
-    ProductListItemComponent
+    ProductListItemComponent,
+    HomeComponent,
+    ImpressComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
