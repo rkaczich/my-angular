@@ -1,0 +1,107 @@
+# eine neue Datenbank (INDEX) anlegen
+PUT /employees
+
+POST /employees/_doc
+{
+  "name": "Emil",
+  "email": "herbert@irgendwas.de",
+  "role": "Administrator",
+  "id": "161415230354"
+}
+
+PUT /employees/_create/13
+{
+  "name": "13",
+  "email": "egon@irgendwas.de",
+  "role": "Administrator",
+  "id": 1614152303543,
+  "lastModified": "2021-02-25"
+}
+
+POST /employees/_update/lcD_3XcBy5xSGlvbJHtO
+{
+  "doc": {
+    "text": "Anmerkung: Normalerweise wird dieses Element in kursiv Schrift angezeigt. Sie können mit CSS jeden Text fett oder kursiv ausgeben und auch die Standartformatierung eines Browsers für die Elemente wie <strong> und <em> überschreiben. Verwenden Sie <cite> Elemente für Zitate oder Quellenverweise. Man nimmt es z.B. für Titel oder Bücher, Namen eines Lieds oder ein Konzert, Theaterstück usw. ; <cite> ist nur für die Quelle gedacht, nicht für das, was Sie daraus zitieren. Verwenden Sie <strong> Element um einen wichtigen Text zu kennzeichnen,  während <em> die Betonung vermittelt. Sie verwenden sie je nach inhaltlicher Anforderung einzeln oder zusammen."
+  }
+
+}
+
+# Anzeige eines Dokumentes
+GET /employees/_doc/isCl3XcBy5xSGlvb43uQ
+
+GET /employees/_search/?size=100
+
+
+# Löschen eines Dokumentes
+DELETE /employees/_doc/kcDo3XcBy5xSGlvblHvX
+
+
+GET /employees/_search
+{
+  "query": {
+    "multi_match" : {
+      "query":    "admin",
+      "type":    "phrase_prefix",
+      "fields": [ "name", "email", "role" ]
+    }
+ },
+ "highlight" : {
+    "fields": {
+      "*" : { "pre_tags" : ["<em>"], "post_tags" : ["</em>"] }
+    }
+  }
+}
+
+
+GET /employees/_search
+{
+  "query": {
+    "multi_match": {
+      "query": "was",
+      "type":  "phrase_prefix",
+      "fields": ["name", "email", "role", "text"]
+    }
+  },
+  "highlight": {
+    "pre_tags" : ["<b class='test'>"],
+    "post_tags" : ["</b>"],
+    "fields": {
+      "*": { "fragment_size": 150}
+    }
+  }
+}
+
+
+GET /employees/_search
+{
+  "query": {
+    "bool": {
+      "must": [
+        { "match": { "name":   "herbert" }}
+      ]
+    }
+  }
+}
+
+# eine Datenbank (INDEX) löschen
+DELETE /employees
+
+PUT /employees
+{
+  "mappings": {
+    "properties": {
+      "lastModified": {
+        "type": "date"
+      }
+    }
+  }
+}
+
+PUT /employee1/_create/1
+{
+"ID": "1",
+"Name":"Peter",
+"EMail":"peter@irgendwas.de",
+"Rolle":"Administrator",
+"lastModified":"2021-02-25"
+}
