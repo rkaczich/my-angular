@@ -8,6 +8,7 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ContactComponent } from './contact/contact.component';
 import { ImpressComponent } from './impress/impress.component';
 import { ContentComponent } from './content/content.component';
+import { SearchResultComponent } from './search-result/search-result.component';
 
 // 3. Pfadangaben
 const routes:Routes = [
@@ -17,6 +18,8 @@ const routes:Routes = [
   {path: 'pl/:id', component: ContentComponent},
   {path: 'contact', component: ContactComponent},
   {path: 'impress', component: ImpressComponent},
+  {path: 'sr', component: SearchResultComponent},
+  {path: 'sr/:searchParam', component: SearchResultComponent},
   {path: '**', component: HomeComponent}
 ];
 

@@ -20,6 +20,7 @@ import { registerLocaleData } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { ImpressComponent } from './impress/impress.component';
 import { ContactComponent } from './contact/contact.component';
+import { SearchResultComponent } from './search-result/search-result.component';
 registerLocaleData(localeDe, localeDeExtra);
 
 @NgModule({
@@ -33,7 +34,8 @@ registerLocaleData(localeDe, localeDeExtra);
     ProductListItemComponent,
     HomeComponent,
     ImpressComponent,
-    ContactComponent
+    ContactComponent,
+    SearchResultComponent
   ],
   imports: [
     BrowserModule,
