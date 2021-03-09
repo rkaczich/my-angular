@@ -1,1 +1,5 @@
-<button (click)="myClickHandler()" type="button" name="button" class="btn btn-primary">Klick mich</button>
+
+<input type="text" name="" [value]="value" class="form-control" (change)="handleChange($event)">
+<button (click)="searchHandler()" type="button" name="button" class="btn btn-primary">Klick mich</button>
+
+<p>{{value}}</p>

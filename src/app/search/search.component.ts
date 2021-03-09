@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ElasticService } from '../services/elastic.service';
 
 @Component({
   selector: 'app-search',
@@ -7,14 +8,21 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class SearchComponent implements OnInit {
 
+
   @Input() redCssStyle = "";
-  constructor() { }
+
+  value:any="";
+
+  constructor(private es:ElasticService) { }
 
   ngOnInit(): void {
   }
 
-  myClickHandler(){
-    console.log("Button angeklickt!");
+  searchHandler(){
+    this.es.searchProducts(this.value);
+  }
 
+  handleChange(event:any){
+    this.value = event.target.value;
   }
 }

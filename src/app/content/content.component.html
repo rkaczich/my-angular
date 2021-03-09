@@ -18,3 +18,13 @@
 
 -->
 <app-product-list [productList]="productList"></app-product-list>
+
+<p>{{data}}</p>
+
+
+<h1>Error: {{errorMsg}}</h1>
+
+
+
+
+<div *ngFor="let product of data">{{product._source.name}}</div>
