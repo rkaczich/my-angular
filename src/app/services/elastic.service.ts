@@ -13,20 +13,18 @@ export class ElasticService {
     this.axiosClient = axios.create();
   }
 
-  searchProducts(value:any){
-      console.log("start es query");
+   searchProducts(value:any){
+      console.log("start es query" + value);
 
-      this.axiosClient.get(esURL, {
-        data: {
-          "query": {
-            "multi_match": {
-              "query": value,
-              "type":  "phrase_prefix",
-              "fields": ["name", "email", "role", "text"]
+      this.axiosClient.post(esURL, {
+        query: {
+            multi_match: {
+              query: value,
+              type:  'phrase_prefix',
+              fields: ['name', 'email', 'role', 'text']
             }
           }
-        }
-      })
+        });
   }
 
   async checkElasticStatus(){
