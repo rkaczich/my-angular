@@ -1,0 +1,68 @@
+# eine neue Datenbank (INDEX) anlegen
+PUT /products
+
+POST /products/_doc
+{
+  "name": "Käsemesser",
+  "ean": "1234567890",
+  "description": "Ein tolles Käsemesser",
+  "rating": 5,
+  "price": 16.55,
+  "currency": "EUR",
+  "stock": 100
+}
+
+POST /products/_doc
+{
+  "name": "Käsehobel",
+  "ean": "1234567891",
+  "description": "Ein toller Käsehobel",
+  "rating": 5,
+  "price": 16.55,
+  "currency": "EUR",
+  "stock": 100
+}
+
+POST /products/_doc
+{
+  "name": "Käseraspel",
+  "ean": "1234567892",
+  "description": "Ein toller Käseraspel",
+  "rating": 3,
+  "price": 11.55,
+  "currency": "EUR",
+  "stock": 200
+}
+
+POST /products/_doc
+{
+  "name": "Käsespender",
+  "ean": "1234567893",
+  "description": "PLastik Käsespender",
+  "rating": 1,
+  "price": 5.55,
+  "currency": "EUR",
+  "stock": 200
+}
+
+POST /products/_doc
+{
+  "name": "Käsebrett",
+  "ean": "1234567893",
+  "description": "Ein passendes Käsebrett",
+  "rating": 3,
+  "price": 10.55,
+  "currency": "EUR",
+  "stock": 200
+}
+
+POST /products/_doc
+{
+  "name": "Käseatlas",
+  "ean": "1234567895",
+  "description": "Das große Buch rund um Käsesorten und -verkostung. Cremiger Camembert aus Frankreich, kräftiger Manchego aus Spanien, milder Emmentaler aus der Schweiz – da läuft Ihnen das Wasser im Mund zusammen? Dieses umfassende Käse-Buch stellt Ihnen über 400 Käsesorten aus der ganzen Welt mit Informationen zu Produktion und Verkostung sowie 25 Herkunftsländer detailliert vor. Genuss und Wissen wird hier auf mehr als 270 einzigartig illustrierten Seiten vereint. Ein Muss für alle Käseliebhaber! ",
+  "rating": 2,
+  "price": 24.95,
+  "currency": "EUR",
+  "stock": 200
+}
