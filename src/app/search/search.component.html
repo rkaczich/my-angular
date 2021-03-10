@@ -1,3 +1,6 @@
-
-<input type="text" name="" [value]="value" class="form-control" (keyup.enter)="searchHandler()" (change)="handleChange($event)">
-<button (click)="searchHandler()" type="button" name="button" class="btn btn-primary">Klick mich</button>
+<div class="input-group mb-3" id="search-bar">
+<input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [value]="value" (keyup.enter)="searchHandler()" (change)="handleChange($event)">
+<div class="input-group-append">
+<button class="btn btn-outline-secondary" type="button" (click)="searchHandler()">Search</button>
+</div>
+</div>

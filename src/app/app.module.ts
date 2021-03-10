@@ -21,6 +21,10 @@ import { HomeComponent } from './home/home.component';
 import { ImpressComponent } from './impress/impress.component';
 import { ContactComponent } from './contact/contact.component';
 import { SearchResultComponent } from './search-result/search-result.component';
+import { SearchResultItemComponent } from './search-result-item/search-result-item.component';
+import { Comp1Component } from './c1/comp1/comp1.component';
+import { Comp2Component } from './c1/comp2/comp2.component';
+import { Subc2Component } from './c1/comp2/subc2/subc2.component';
 registerLocaleData(localeDe, localeDeExtra);
 
 @NgModule({
@@ -35,7 +39,11 @@ registerLocaleData(localeDe, localeDeExtra);
     HomeComponent,
     ImpressComponent,
     ContactComponent,
-    SearchResultComponent
+    SearchResultComponent,
+    SearchResultItemComponent,
+    Comp1Component,
+    Comp2Component,
+    Subc2Component
   ],
   imports: [
     BrowserModule,

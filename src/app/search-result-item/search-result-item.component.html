@@ -1,0 +1,11 @@
+<div class="card" style="width: 18rem;">
+  <img src={{product._source.image}} width="286px" height="281px" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{product._source.name}}</h5>
+    <p class="card-text">{{product._source.description | slice:0:30}}</p>
+  <!--  <p class="card-text">
+      <span [innerHtml]="product.highlight.description[0]"></span>
+    </p>-->
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>

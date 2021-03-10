@@ -25,8 +25,8 @@ export class ElasticService {
             }
           },
           highlight: {
-            pre_tags : ['<b>'],
-            post_tags : ['</b>'],
+            pre_tags : ['<strong>'],
+            post_tags : ['</strong>'],
             fields: { '*': {} }
           }
         });
