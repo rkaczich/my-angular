@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import axios from 'axios';
 import { AxiosInstance } from 'axios';
 
-const esURL = "http://localhost:9200/employees/_search";
+const esURL = "http://localhost:9200/products/_search";
 
 @Injectable({ providedIn: 'root'})
 export class ElasticService {
@@ -21,7 +21,7 @@ export class ElasticService {
             multi_match: {
               query: value,
               type:  'phrase_prefix',
-              fields: ['name', 'email', 'role', 'text']
+              fields: ['name', 'description']
             }
           },
           highlight: {

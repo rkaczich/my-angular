@@ -1,6 +1,3 @@
 
 <input type="text" name="" [value]="value" class="form-control" (keyup.enter)="searchHandler()" (change)="handleChange($event)">
 <button (click)="searchHandler()" type="button" name="button" class="btn btn-primary">Klick mich</button>
-
-
-<p *ngIf="data[0]" >{{data[0].highlight.name[0]}}></p>
