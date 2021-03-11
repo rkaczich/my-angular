@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+// 1. Animations Modul importieren
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -49,9 +51,11 @@ registerLocaleData(localeDe, localeDeExtra);
   ],
   imports: [
     BrowserModule,
+    // 2. Module verfügbar machen
+    BrowserAnimationsModule,
     AppRoutingModule,
     AlertModule,
-    ButtonsModule,
+    ButtonsModule
   ],
   providers: [
     // Bekanntmachung der gewählten Einstellung in der App
