@@ -2,6 +2,6 @@
 Die Schleife muss durch Produkte laufen und jeweils 3 Produkte in eine Zeile bringen.
 Anschließend muss eine neue Zeile erzeugt werden und wieder Produkte den Spalten zugeordnet werden
  -->
-<div class="row">
+<div class="row" searchParam="searchParam">
 <app-search-result-item *ngFor="let product of data" [product]="product"></app-search-result-item>
 </div>

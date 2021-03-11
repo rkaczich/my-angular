@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+// 1.
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 //import { ElasticService } from '../services/elastic.service';
 import { Router } from '@angular/router';
 
@@ -12,9 +13,6 @@ export class SearchComponent implements OnInit {
 
   value:any="";
 
-//  data:any = [];
-//  errorMsg:string = "";
-
 
   constructor(/*private es:ElasticService,*/ private router: Router) { }
 
@@ -22,18 +20,14 @@ export class SearchComponent implements OnInit {
   }
 
   searchHandler(){
-
-    // this.es.searchProducts(this.searchParam)
-    // .then(data => {this.data = data.hits.hits; console.log(this.data);
-    // })
-    // .catch(error => {this.errorMsg = error.message});
-
-
-      // navigation auf die Zielseite
+    console.log("Navigate");
+    this.router.navigate(['/sr', this.value]);
     this.router.navigateByUrl("/sr/"+this.value);
   }
 
   handleChange(event:any){
     this.value = event.target.value;
   }
+
+
 }

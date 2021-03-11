@@ -27,6 +27,8 @@ import { Comp2Component } from './c1/comp2/comp2.component';
 import { Subc2Component } from './c1/comp2/subc2/subc2.component';
 registerLocaleData(localeDe, localeDeExtra);
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,7 +51,7 @@ registerLocaleData(localeDe, localeDeExtra);
     BrowserModule,
     AppRoutingModule,
     AlertModule,
-    ButtonsModule
+    ButtonsModule,
   ],
   providers: [
     // Bekanntmachung der gewählten Einstellung in der App

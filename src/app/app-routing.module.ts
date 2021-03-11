@@ -18,7 +18,6 @@ const routes:Routes = [
   {path: 'pl/:id', component: ContentComponent},
   {path: 'contact', component: ContactComponent},
   {path: 'impress', component: ImpressComponent},
-  {path: 'sr', component: SearchResultComponent},
   {path: 'sr/:searchParam', component: SearchResultComponent},
   {path: '**', component: HomeComponent}
 ];
